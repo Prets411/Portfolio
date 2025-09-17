@@ -7,67 +7,54 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="./assets/favicon.png">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-    @keyframes gradient {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-    .hero-bg {
-      background: linear-gradient(120deg, #0f172a 0%, #1e293b 50%, #18181b 100%);
-      background-size: 200% 200%;
-      animation: gradient 8s ease-in-out infinite;
-    }
-    .glass {
-      background: rgba(24, 24, 27, 0.85);
-      backdrop-filter: blur(6px);
-      border: 1px solid rgba(60, 60, 70, 0.2);
-    }
-    .section-title {
-      letter-spacing: 0.05em;
-    }
-  </style>
+  <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body class="hero-bg bg-zinc-900 text-gray-200 font-sans min-h-screen">
   <!-- Header -->
-  <header class="w-full py-6 px-6 flex justify-between items-center glass shadow-lg fixed top-0 left-0 z-50">
-    <div class="text-xl font-bold text-blue-400 tracking-wide">Ragner Fritz Q. Bartiana</div>
+  <header class="w-full py-4 px-6 flex justify-between items-center glass shadow-lg fixed top-0 left-0 z-50">
+    <div class="flex items-center gap-4">
+      <img src="./assets/Profile.jpg" alt="Profile photo" class="w-10 h-10 md:w-12 md:h-12 object-cover rounded-full profile-border-sm shadow-sm">
+      <div class="text-xl font-bold text-gray-300 tracking-wide">Ragner Fritz Q. Bartiana</div>
+    </div>
     <nav>
       <ul class="flex gap-8 text-gray-300 font-semibold">
-        <li><a href="#about" class="hover:text-blue-400 transition">About</a></li>
-        <li><a href="#skills" class="hover:text-blue-400 transition">Skills</a></li>
-        <li><a href="#projects" class="hover:text-blue-400 transition">Projects</a></li>
-        <li><a href="#contact" class="hover:text-blue-400 transition">Contact</a></li>
+        <li><a href="#about" class="hover:text-gray-300 transition">About</a></li>
+        <li><a href="#skills" class="hover:text-gray-300 transition">Skills</a></li>
+        <li><a href="#projects" class="hover:text-gray-300 transition">Projects</a></li>
+        <li><a href="#designs" class="hover:text-gray-300 transition">Designs</a></li>
+        <li><a href="#contact" class="hover:text-gray-300 transition">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="flex flex-col items-center justify-center min-h-[70vh] pt-32 pb-12">
-    <div class="glass rounded-xl p-10 shadow-xl max-w-2xl w-full text-center">
-      <h1 class="text-4xl md:text-5xl font-bold text-blue-400 mb-4 section-title">Hi, I'm Ragner Fritz Q. Bartiana</h1>
-      <p class="text-lg md:text-xl text-gray-300 mb-6">
-        I build modern, responsive web applications with clean and efficient code.<br>
-        My goal is to solve complex problems and create user-friendly solutions.<br>
-        Let's build something amazing together!
-      </p>
-      <a href="#contact" class="inline-block bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-blue-600 transition active:bg-blue-700">
-        Contact Me
-      </a>
-    </div>
-  </section>
+  <!-- Hero Section (replaced with About Me) -->
+  <section id="about" class="forest-hero flex flex-col items-center justify-center min-h-[70vh] pt-32 pb-12">
+    <div class="glass rounded-xl p-10 shadow-xl max-w-4xl w-full">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-6 text-blue-400 section-title">About Me</h2>
 
-  <!-- About Me -->
-  <section id="about" class="py-20 bg-zinc-800">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-8 text-blue-400 section-title">About Me</h2>
-      <div class="max-w-3xl mx-auto glass rounded-xl p-8 shadow text-center">
-        <p class="text-lg text-gray-300">
-          I'm a passionate developer focused on creating seamless digital experiences. With a strong foundation in both front-end and back-end technologies, I strive to deliver solutions that are not only functional but also visually appealing and intuitive. My expertise spans web development, UI/UX design, and prototyping, ensuring every project meets the highest standards.
-        </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+        <!-- Profile image -->
+        <div class="flex justify-center">
+          <img src="./assets/Profile.jpg" alt="Ragner Fritz Q. Bartiana" class="w-36 h-36 md:w-48 md:h-48 object-cover rounded-full profile-border shadow-lg mx-auto">
+        </div>
+
+        <!-- Text content (spans two columns on md+) -->
+        <div class="md:col-span-2">
+          <h3 class="text-2xl md:text-3xl font-extrabold text-gray-300 mb-2">Ragner Fritz Q. Bartiana</h3>
+          <p class="text-sm md:text-base text-gray-400 mb-4">Full-stack web developer & designer — building modern, responsive web applications with attention to UX and visual polish.</p>
+
+          <p class="text-lg md:text-xl text-gray-300">
+            I'm a passionate developer focused on creating seamless digital experiences. With a strong foundation in both front-end and back-end technologies, I strive to deliver solutions that are not only functional but also visually appealing and intuitive. My expertise spans web development, UI/UX design, and prototyping, ensuring every project meets the highest standards.
+          </p>
+
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="text-xs md:text-sm bg-zinc-900 text-gray-300 px-3 py-1 rounded-full border border-zinc-700">HTML</span>
+            <span class="text-xs md:text-sm bg-zinc-900 text-gray-300 px-3 py-1 rounded-full border border-zinc-700">CSS</span>
+            <span class="text-xs md:text-sm bg-zinc-900 text-gray-300 px-3 py-1 rounded-full border border-zinc-700">JavaScript</span>
+            <span class="text-xs md:text-sm bg-zinc-900 text-gray-300 px-3 py-1 rounded-full border border-zinc-700">React</span>
+            <span class="text-xs md:text-sm bg-zinc-900 text-gray-300 px-3 py-1 rounded-full border border-zinc-700">Canva / Figma</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -147,34 +134,220 @@
       </div>
     </div>
   </section>
+
+  <!-- Visual break between Skills and Projects -->
+  <div class="w-full mt-8 flex flex-col items-center">
+    <div class="h-6 md:h-10"></div>
+    <div class="w-full overflow-hidden" aria-hidden="true">
+      <svg class="block w-full" viewBox="0 0 1200 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,20 C200,80 400,0 600,20 C800,40 1000,0 1200,20 L1200,80 L0,80 Z"
+              style="fill:var(--forest-800);opacity:0.06;"></path>
+      </svg>
+    </div>
+    <div class="h-6 md:h-8"></div>
+  </div>
   
-    <!-- Projects -->
+  <!-- Projects -->
   <section id="projects" class="py-20 bg-zinc-800">
     <div class="container mx-auto px-6">
       <h2 class="text-3xl font-bold text-center mb-8 text-blue-400 section-title">Projects</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Project 1 -->
-        <div class="glass p-6 rounded-xl shadow-lg hover:shadow-2xl transition">
-          <img src="./assets/Halarma.png" alt="HALA!RMA Project" class="w-full h-48 object-cover rounded mb-4 hover:scale-105 transition-transform duration-300 border border-zinc-700">
-          <h3 class="text-lg font-semibold text-blue-300 mb-2">Full-stack, Capstone Project HALA!RMA</h3>
-          <p class="mt-2 text-gray-400 text-sm">An Incident Reporting and Hazard Information System for the Health and Safety Office. Features SQL, authentication via magic link, Supabase database, and user management.</p>
-          <a href="https://yourwebsite1.com" target="_blank" class="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 active:bg-blue-700 font-semibold shadow">
+        <div class="glass p-6 rounded-xl shadow-lg hover:shadow-2xl transition flex flex-col h-full">
+          <div class="flex-1">
+            <img src="./assets/Halarma.png" alt="HALA!RMA Project" class="w-full h-48 object-cover rounded mb-4 hover:scale-105 transition-transform duration-300 border border-zinc-700">
+            <h3 class="text-lg font-semibold text-blue-300 mb-2">Full-stack, Capstone Project HALA!RMA</h3>
+            <p class="mt-2 text-gray-400 text-sm">An Incident Reporting and Hazard Information System for the Health and Safety Office. Features SQL, authentication via magic link, Supabase database, and user management.</p>
+          </div>
+          <a href="https://yourwebsite1.com" target="_blank" class="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 active:bg-blue-700 font-semibold shadow self-start">
             View Demo
           </a>
         </div>
+
         <!-- Project 2 -->
-        <div class="glass p-6 rounded-xl shadow-lg hover:shadow-2xl transition">
-          <img src="./assets/QM.png" alt="Random Quotes Machine" class="w-full h-48 object-cover rounded mb-4 hover:scale-105 transition-transform duration-300 border border-zinc-700">
-          <h3 class="text-lg font-semibold text-blue-300 mb-2">Front-end (Random Quotes Machine)</h3>
-          <p class="mt-2 text-gray-400 text-sm">A simple web app that generates random quotes. Built with React and styled for a clean, modern look.</p>
-          <a href="https://quotesmachine-rosy.vercel.app" target="_blank" class="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 active:bg-blue-700 font-semibold shadow">
+        <div class="glass p-6 rounded-xl shadow-lg hover:shadow-2xl transition flex flex-col h-full">
+          <div class="flex-1">
+            <img src="./assets/QM.png" alt="Random Quotes Machine" class="w-full h-48 object-cover rounded mb-4 hover:scale-105 transition-transform duration-300 border border-zinc-700">
+            <h3 class="text-lg font-semibold text-blue-300 mb-2">Front-end (Random Quotes Machine)</h3>
+            <p class="mt-2 text-gray-400 text-sm">A simple web app that generates random quotes. Built with React and styled for a clean, modern look.</p>
+          </div>
+          <a href="https://quotesmachine-rosy.vercel.app" target="_blank" class="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 active:bg-blue-700 font-semibold shadow self-start">
             View Demo
           </a>
         </div>
+
         <!-- Add more projects here if needed -->
       </div>
     </div>
   </section>
+
+  <!-- Designs (Posters, Invitations, Vows, Name Cards) -->
+  <section id="designs" class="py-20 bg-gradient-to-b from-zinc-900 to-zinc-800">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-8 text-blue-400 section-title">Designs</h2>
+      <p class="text-base md:text-lg text-center mb-8 text-gray-300 max-w-2xl mx-auto">
+        Posters, wedding invitations, vows, and name cards — selected design work showcasing layout, typography and print-ready assets.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Posters -->
+        <div class="glass p-4 rounded-lg shadow flex flex-col items-center text-center">
+          <img data-cat="posters" data-idx="0" src="./assets/Posters/Green%20Lined%20Climate%20Change%20Environment%20Infographic%20.png" alt="Poster - Sample" class="gallery-thumb w-full h-40 object-cover rounded mb-4 border border-zinc-700 cursor-pointer">
+          <h3 class="text-lg font-semibold text-blue-300 mb-1">Posters</h3>
+          <p class="text-xs text-gray-400 mb-3">Bold layouts for events & campaigns.</p>
+          <button data-cat="posters" data-idx="0" class="open-btn inline-block bg-blue-500 text-white px-3 py-1 rounded text-sm">View</button>
+        </div>
+
+        <!-- Wedding Invitations -->
+        <div class="glass p-4 rounded-lg shadow flex flex-col items-center text-center">
+          <div class="w-full h-40 mb-4 grid grid-cols-3 gap-2">
+            <img data-cat="invitations" data-idx="0" src="./assets/Invitations/1.png" alt="Invite 1" class="gallery-thumb w-full h-full object-cover rounded border border-zinc-700 cursor-pointer">
+            <img data-cat="invitations" data-idx="1" src="./assets/Invitations/2.png" alt="Invite 2" class="gallery-thumb w-full h-full object-cover rounded border border-zinc-700 cursor-pointer">
+            <img data-cat="invitations" data-idx="2" src="./assets/Invitations/3.png" alt="Invite 3" class="gallery-thumb w-full h-full object-cover rounded border border-zinc-700 cursor-pointer">
+          </div>
+          <h3 class="text-lg font-semibold text-blue-300 mb-1">Wedding Invitations</h3>
+          <p class="text-xs text-gray-400 mb-3">Elegant, print-ready invites.</p>
+          <button data-cat="invitations" data-idx="0" class="open-btn inline-block bg-blue-500 text-white px-3 py-1 rounded text-sm">View</button>
+        </div>
+
+        <!-- Vows -->
+        <div class="glass p-4 rounded-lg shadow flex flex-col items-center text-center">
+          <img data-cat="vows" data-idx="0" src="./assets/Vows/2.png" alt="Vows - Sample" class="gallery-thumb w-full h-40 object-cover rounded mb-4 border border-zinc-700 cursor-pointer">
+          <h3 class="text-lg font-semibold text-blue-300 mb-1">Vows</h3>
+          <p class="text-xs text-gray-400 mb-3">Typographic layouts for printed vows.</p>
+          <button data-cat="vows" data-idx="0" class="open-btn inline-block bg-blue-500 text-white px-3 py-1 rounded text-sm">View</button>
+        </div>
+
+        <!-- Name Cards -->
+        <div class="glass p-4 rounded-lg shadow flex flex-col items-center text-center">
+          <div class="w-full h-40 mb-4 grid grid-cols-3 gap-2">
+            <img data-cat="namecards" data-idx="0" src="./assets/NameCards/1.png" alt="Namecard 1" class="gallery-thumb w-full h-full object-cover rounded border border-zinc-700 cursor-pointer">
+            <img data-cat="namecards" data-idx="1" src="./assets/NameCards/2.png" alt="Namecard 2" class="gallery-thumb w-full h-full object-cover rounded border border-zinc-700 cursor-pointer">
+            <img data-cat="namecards" data-idx="2" src="./assets/NameCards/3.png" alt="Namecard 3" class="gallery-thumb w-full h-full object-cover rounded border border-zinc-700 cursor-pointer">
+          </div>
+          <h3 class="text-lg font-semibold text-blue-300 mb-1">Name Cards</h3>
+          <p class="text-xs text-gray-400 mb-3">Clean, professional business cards.</p>
+          <button data-cat="namecards" data-idx="0" class="open-btn inline-block bg-blue-500 text-white px-3 py-1 rounded text-sm">View</button>
+        </div>
+      </div>
+
+      <!-- removed image helper text as requested -->
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="galleryModal" class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-70 z-50">
+      <div class="relative max-w-4xl w-full mx-4">
+        <button id="closeModal" class="absolute top-2 right-2 text-white bg-zinc-800 bg-opacity-60 hover:bg-opacity-80 rounded-full p-2">✕</button>
+        <img id="modalImage" src="" alt="Large preview" class="w-full max-h-[80vh] object-contain rounded-lg glass p-4">
+        <div class="flex items-center justify-between mt-3">
+          <button id="prevBtn" class="hidden bg-zinc-800 text-white px-4 py-2 rounded hover:bg-zinc-700" aria-label="Previous image">&lt;</button>
+          <div id="meta" class="text-sm text-gray-300"></div>
+          <button id="nextBtn" class="hidden bg-zinc-800 text-white px-4 py-2 rounded hover:bg-zinc-700" aria-label="Next image">&gt;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // simple gallery mapping - update if you add/remove files
+    const galleries = {
+      posters: [
+        "./assets/Posters/Green%20Lined%20Climate%20Change%20Environment%20Infographic%20.png"
+      ],
+      invitations: [
+        "./assets/Invitations/1.png",
+        "./assets/Invitations/2.png",
+        "./assets/Invitations/3.png",
+        "./assets/Invitations/4.png",
+        "./assets/Invitations/5.png",
+        "./assets/Invitations/10.png"
+      ],
+      vows: [
+        "./assets/Vows/2.png"
+      ],
+      namecards: [
+        "./assets/NameCards/1.png",
+        "./assets/NameCards/2.png",
+        "./assets/NameCards/3.png"
+      ]
+    };
+
+    const modal = document.getElementById('galleryModal');
+    const modalImage = document.getElementById('modalImage');
+    const meta = document.getElementById('meta');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    let currentCat = null;
+    let currentIndex = 0;
+
+    function openGallery(cat, idx = 0) {
+      const list = galleries[cat];
+      if (!list || list.length === 0) return;
+      currentCat = cat;
+      currentIndex = idx % list.length;
+      modalImage.src = list[currentIndex];
+      meta.textContent = (currentIndex + 1) + " / " + list.length + " — " + cat;
+
+      // show prev/next only when there are multiple images
+      if (list.length > 1) {
+        prevBtn.classList.remove('hidden');
+        nextBtn.classList.remove('hidden');
+      } else {
+        prevBtn.classList.add('hidden');
+        nextBtn.classList.add('hidden');
+      }
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeGallery() {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      modalImage.src = '';
+      currentCat = null;
+      currentIndex = 0;
+      // hide controls
+      prevBtn.classList.add('hidden');
+      nextBtn.classList.add('hidden');
+    }
+
+    function showNext(delta = 1) {
+      if (!currentCat) return;
+      const list = galleries[currentCat];
+      if (!list || list.length <= 1) return; // nothing to navigate
+      currentIndex = (currentIndex + delta + list.length) % list.length;
+      modalImage.src = list[currentIndex];
+      meta.textContent = (currentIndex + 1) + " / " + list.length + " — " + currentCat;
+    }
+
+    // wire up thumbnail clicks and open buttons
+    document.querySelectorAll('.gallery-thumb, .open-btn').forEach(el => {
+      el.addEventListener('click', (e) => {
+        const cat = el.getAttribute('data-cat');
+        const idx = parseInt(el.getAttribute('data-idx') || '0', 10);
+        openGallery(cat, idx);
+      });
+    });
+
+    document.getElementById('closeModal').addEventListener('click', closeGallery);
+    prevBtn.addEventListener('click', () => showNext(-1));
+    nextBtn.addEventListener('click', () => showNext(1));
+
+    // close when clicking outside image
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeGallery();
+    });
+
+    // keyboard navigation (only when gallery has multiple images)
+    document.addEventListener('keydown', (e) => {
+      if (!currentCat) return;
+      const list = galleries[currentCat] || [];
+      if (e.key === 'ArrowRight' && list.length > 1) showNext(1);
+      if (e.key === 'ArrowLeft' && list.length > 1) showNext(-1);
+      if (e.key === 'Escape') closeGallery();
+    });
+  </script>
 
   <!-- Contact -->
   <section id="contact" class="py-20 bg-gradient-to-t from-zinc-900 via-zinc-800 to-zinc-700 text-gray-200">
